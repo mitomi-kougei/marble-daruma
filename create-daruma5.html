@@ -387,7 +387,7 @@ let shotBlob=null,shotURL=null;
 async function makeShot(){
  composite(1);
  const w=FWf()*dpr,h=frame.h*dpr,x0=(frame.cx*dpr-w/2),y0=(frame.cy*dpr-h/2);
- const pad=.04,sx=Math.max(0,x0-w*pad),sy=Math.max(0,y0-h*pad),sw=Math.min(cv.width-sx,w*(1+2*pad)),sh=Math.min(cv.height-sy,h*(1+2*pad));
+ const pad=.08,sx=Math.max(0,x0-w*pad),sy=Math.max(0,y0-h*pad),sw=Math.min(cv.width-sx,w*(1+2*pad)),sh=Math.min(cv.height-sy,h*(1+2*pad));
  const crop=document.createElement("canvas");crop.width=sw|0;crop.height=sh|0;crop.getContext("2d").drawImage(cv,sx,sy,sw,sh,0,0,sw,sh);
  const O=document.createElement("canvas");O.width=1080;O.height=1350;const c=O.getContext("2d");
  c.fillStyle="#fff";c.fillRect(0,0,1080,1350);
